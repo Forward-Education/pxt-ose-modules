@@ -2,7 +2,7 @@ namespace opensciedModules {
     //% fixedInstances
     export class OpensciedHumidityClient extends modules.HumidityClient {
         /**
-         * The amount of humidity, as a percentage.
+         * Returns the sensor's humidity reading (%).
          */
         //% group="BME280"
         //% block="$this %"

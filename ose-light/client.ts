@@ -5,11 +5,11 @@ namespace opensciedModules {
          * Returns the sensor's illuminance reading (lux).
          */
         //% group="Light"
-        //% block="%illuminance illuminance (lux)"
+        //% block="$this lux"
         //% blockId=openscied_illuminance_get_illuminance
         //% weight=100
         illuminance(): number {
-            return super.reading()
+            return super.illuminance()
         }
 
         /**
