@@ -2,7 +2,7 @@ namespace opensciedModules {
     //% fixedInstances
     export class OpensciedIlluminanceClient extends modules.IlluminanceClient {
         /**
-         * The amount of illuminance, as lumens per square metre.
+         * Returns the sensor's illuminance reading (lux).
          */
         //% group="Light"
         //% block="%illuminance illuminance (lux)"

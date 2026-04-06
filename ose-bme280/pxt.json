@@ -1,0 +1,28 @@
+{
+    "name": "ose-bme280",
+    "version": "1.0.0",
+    "description": "OpenSciEd BME280 sensor",
+    "license": "MIT",
+    "dependencies": {
+        "ose-base": "github:Forward-Education/pxt-ose-base#91e2d055f14644daf89e64c570ce4d26e6bf6772",
+        "jacdac-temperature": "github:jacdac/pxt-jacdac/temperature#v1.9.41",
+        "jacdac-humidity": "github:jacdac/pxt-jacdac/humidity#v1.9.41",
+        "jacdac-air-pressure": "github:jacdac/pxt-jacdac/air-pressure#v1.9.41"
+    },
+    "files": [
+        "temperature-client.ts",
+        "humidity-client.ts",
+        "air-pressure-client.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "8.0.16",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
+}
