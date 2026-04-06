@@ -10,9 +10,9 @@
         "jacdac-air-pressure": "github:jacdac/pxt-jacdac/air-pressure#v1.9.41"
     },
     "files": [
-        "temperature-client.ts",
-        "humidity-client.ts",
-        "air-pressure-client.ts"
+        "src/temperature-client.ts",
+        "src/humidity-client.ts",
+        "src/air-pressure-client.ts"
     ],
     "testFiles": [
         "test.ts"
