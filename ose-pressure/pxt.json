@@ -1,0 +1,24 @@
+{
+    "name": "ose-pressure",
+    "version": "1.0.0",
+    "description": "OpenSciEd pressure sensor",
+    "license": "MIT",
+    "dependencies": {
+        "ose-base": "github:Forward-Education/pxt-ose-base#e71cb02423451df2b04a9927ab7dec447335995e",
+        "jacdac-pressure": "github:jacdac/pxt-jacdac/pressure-button#v1.9.41"
+    },
+    "files": [
+        "client.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "8.0.16",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
+}
