@@ -1,0 +1,25 @@
+{
+    "name": "ose-servo-continuous",
+    "version": "1.1.0",
+    "description": "OpenSciEd Servo Continuous",
+    "license": "MIT",
+    "dependencies": {
+        "ose-base": "github:Forward-Education/pxt-ose-base#562d1d851fbb2f8a28b8517d1fca863abef979b9",
+        "ose-servo-base": "github:Forward-Education/pxt-ose-base/ose-servo-base#562d1d851fbb2f8a28b8517d1fca863abef979b9"
+    },
+    "files": [
+        "blocks.ts",
+        "driving.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "7.0.61",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
+}
