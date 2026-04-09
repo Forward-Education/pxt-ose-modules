@@ -1,14 +1,15 @@
 {
-    "name": "ose-servo-positional",
+    "name": "ose-dial",
     "version": "1.0.0",
-    "description": "OpenSciEd Servo Positional",
+    "description": "OpenSciEd Dial",
     "license": "MIT",
     "dependencies": {
         "ose-base": "github:Forward-Education/pxt-ose-base#562d1d851fbb2f8a28b8517d1fca863abef979b9",
-        "ose-servo-base": "github:Forward-Education/pxt-ose-base/ose-servo-base#562d1d851fbb2f8a28b8517d1fca863abef979b9"
+        "jacdac-rotary-encoder": "github:jacdac/pxt-jacdac/rotary-encoder#v1.9.41",
+        "jacdac-button": "github:jacdac/pxt-jacdac/button#v1.9.41"
     },
     "files": [
-        "blocks.ts"
+        "client.ts"
     ],
     "testFiles": [
         "test.ts"

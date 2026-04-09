@@ -1,14 +1,14 @@
 {
-    "name": "ose-servo-positional",
+    "name": "ose-moisture",
     "version": "1.0.0",
-    "description": "OpenSciEd Servo Positional",
+    "description": "FWD Edu Climate Action Kit Gen. 2 Moisture",
     "license": "MIT",
     "dependencies": {
         "ose-base": "github:Forward-Education/pxt-ose-base#562d1d851fbb2f8a28b8517d1fca863abef979b9",
-        "ose-servo-base": "github:Forward-Education/pxt-ose-base/ose-servo-base#562d1d851fbb2f8a28b8517d1fca863abef979b9"
+        "jacdac-soil-moisture": "github:jacdac/pxt-jacdac/soil-moisture#v1.9.41"
     },
     "files": [
-        "blocks.ts"
+        "client.ts"
     ],
     "testFiles": [
         "test.ts"
