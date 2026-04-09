@@ -5,7 +5,7 @@ namespace opensciedModules {
          * Returns the sensor's humidity reading (%).
          */
         //% group="BME280"
-        //% block="$this %"
+        //% block="$this \\%"
         //% blockId=openscied_humidity_get_humidity
         //% weight=100
         humidity(): number {
@@ -18,7 +18,7 @@ namespace opensciedModules {
          * @param direction over or under the threshold
          */
         //% group="BME280"
-        //% block="$this is $direction $threshold %"
+        //% block="$this is $direction $threshold \\%"
         //% blockId=openscied_humidity_is_past_threshold
         //% weight=99
         isPastThreshold(
