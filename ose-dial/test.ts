@@ -3,12 +3,12 @@
 //  position()
 //  onRotated(direction: DialDirection, handler: () => void): void
 opensciedModules.dial1.onRotated(
-    fwdEnums.ClockwiseCounterclockwise.Clockwise,
+    opensciedEnums.ClockwiseCounterclockwise.Clockwise,
     () =>
         console.log("turned -> position " + opensciedModules.dial1.position()),
 )
 opensciedModules.dial1.onRotated(
-    fwdEnums.ClockwiseCounterclockwise.Counterclockwise,
+    opensciedEnums.ClockwiseCounterclockwise.Counterclockwise,
     () =>
         console.log("turned <- position " + +opensciedModules.dial1.position()),
 )

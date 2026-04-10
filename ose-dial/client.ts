@@ -11,7 +11,7 @@ namespace opensciedModules {
             this._ccwAction = () => {}
 
             // this sets up the functions to run when the dial is turned clockwise or counterclockwise
-            // initially the functions are blank, they get assigned by the makecode program through fwdOnDialTurned()
+            // initially the functions are blank, they get assigned by the makecode program through onRotated()
             super.onReadingChangedBy(1, (delta: number) => {
                 if (delta < 0) {
                     this._cwAction()
@@ -31,10 +31,12 @@ namespace opensciedModules {
         //% blockId=openscied_dial_on_rotated
         //% weight=100
         onRotated(
-            direction: fwdEnums.ClockwiseCounterclockwise,
+            direction: opensciedEnums.ClockwiseCounterclockwise,
             handler: () => void,
         ): void {
-            if (direction === fwdEnums.ClockwiseCounterclockwise.Clockwise) {
+            if (
+                direction === opensciedEnums.ClockwiseCounterclockwise.Clockwise
+            ) {
                 this._cwAction = handler
             } else {
                 this._ccwAction = handler

@@ -1,6 +1,8 @@
-namespace fwdSensors {
+namespace opensciedModules {
     //% fixedInstances
-    export class FwdSoilMoistureClient extends modules.SoilMoistureClient {
+    export class OpensciedSoilMoistureClient
+        extends modules.SoilMoistureClient
+    {
         constructor(role: string) {
             super(role)
         }
@@ -10,7 +12,7 @@ namespace fwdSensors {
          */
         //% group="Moisture"
         //% block="$this moisture level (\\%)"
-        //% blockId=fwd_moisture_get_moisture_level
+        //% blockId=openscied_moisture_get_moisture_level
         //% weight=100
         moistureLevel(): number {
             return super.moisture()
@@ -23,27 +25,27 @@ namespace fwdSensors {
          */
         //% group="Moisture"
         //% block="$this is $direction $threshold \\%"
-        //% blockId=fwd_moisture_is_past_threshold
+        //% blockId=openscied_moisture_is_past_threshold
         //% threshold.min=0 threshold.max=100 threshold.defl=5
         //% weight=99
         isPastThreshold(
             threshold: number,
-            direction: fwdEnums.OverUnder
+            direction: opensciedEnums.OverUnder,
         ): boolean {
             const difference = this.moisture() - threshold > 0
             const isPastThreshold =
-                (direction === fwdEnums.OverUnder.Over && difference) ||
-                (direction === fwdEnums.OverUnder.Under && !difference)
+                (direction === opensciedEnums.OverUnder.Over && difference) ||
+                (direction === opensciedEnums.OverUnder.Under && !difference)
             return isPastThreshold
         }
     }
 
     //% fixedInstance whenUsed
-    export const moisture1 = new FwdSoilMoistureClient("moisture1")
+    export const moisture1 = new OpensciedSoilMoistureClient("moisture1")
     //% fixedInstance whenUsed
-    export const moisture2 = new FwdSoilMoistureClient("moisture2")
+    export const moisture2 = new OpensciedSoilMoistureClient("moisture2")
     //% fixedInstance whenUsed
-    export const moisture3 = new FwdSoilMoistureClient("moisture3")
+    export const moisture3 = new OpensciedSoilMoistureClient("moisture3")
     //% fixedInstance whenUsed
-    export const moisture4 = new FwdSoilMoistureClient("moisture4")
+    export const moisture4 = new OpensciedSoilMoistureClient("moisture4")
 }

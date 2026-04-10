@@ -4,7 +4,7 @@
     "description": "OpenSciEd light sensor",
     "license": "MIT",
     "dependencies": {
-        "ose-base": "github:Forward-Education/pxt-ose-base#562d1d851fbb2f8a28b8517d1fca863abef979b9",
+        "ose-base": "github:Forward-Education/pxt-ose-base#a0c08324fc013397625d6e0f9fd99e0eb30db26f",
         "jacdac-light": "github:jacdac/pxt-jacdac/illuminance#v1.9.41"
     },
     "files": [

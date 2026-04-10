@@ -3,14 +3,14 @@
 // There are seemingly unnecessary returns after some printAndWait() calls.
 // Those returns seemed to prevent unpredictable behavior in testing.
 
-namespace fwdSensors {
+namespace opensciedModules {
     /**
      * Initializing makes LCD blocks work more reliably in "on start".
      * Place this block in "on start" before the LCD blocks.
      * It simply delays program execution by 1 second.
      */
     //% block="initialize LCD"
-    //% blockId=fwd_lcd_initialize
+    //% blockId=openscied_lcd_initialize
     //% group="LCD"
     //% weight=100
     export function initializeLcd() {
@@ -22,7 +22,7 @@ namespace fwdSensors {
      */
     //% block="round $value to $decimals decimals"
     //% decimals.min=0 decimals.max=4 decimals.defl=0
-    //% blockId=fwd_lcd_round
+    //% blockId=openscied_lcd_round
     //% group="LCD"
     //% weight=95
     export function round(value: number, decimals: number): number {
@@ -36,7 +36,9 @@ namespace fwdSensors {
     }
 
     //% fixedInstances blockGap=8
-    export class LCDClient extends modules.CursorCharacterScreenClient {
+    export class OpensciedLCDClient
+        extends modules.CursorCharacterScreenClient
+    {
         private readonly delay = 20
 
         constructor(role: string) {
@@ -48,7 +50,7 @@ namespace fwdSensors {
          * Clear the entire screen.
          */
         //% block="clear $this"
-        //% blockId=fwd_lcd_clear_screen
+        //% blockId=openscied_lcd_clear_screen
         //% group="LCD"
         //% weight=94
         clearScreen() {
@@ -66,7 +68,7 @@ namespace fwdSensors {
          */
         //% block="print string $text on line $line of $this"
         //% line.min=1 line.max=2 line.defl=1
-        //% blockId=fwd_lcd_print_line_string
+        //% blockId=openscied_lcd_print_line_string
         //% group="LCD"
         //% weight=99
         printLineString(text: string, line: number) {
@@ -98,7 +100,7 @@ namespace fwdSensors {
          */
         //% block="print string $text on quadrant $quadrant of $this"
         //% quadrant.min=1 quadrant.max=4 quadrant.defl=1
-        //% blockId=fwd_lcd_print_quadrant_string
+        //% blockId=openscied_lcd_print_quadrant_string
         //% group="LCD"
         //% weight=98
         printQuadrantString(text: string, quadrant: number) {
@@ -149,7 +151,7 @@ namespace fwdSensors {
          */
         //% block="print number $value on line $line of $this"
         //% line.min=1 line.max=2 line.defl=1
-        //% blockId=fwd_lcd_print_line_number
+        //% blockId=openscied_lcd_print_line_number
         //% group="LCD"
         //% weight=97
         printLineNumber(value: number, line: number) {
@@ -166,7 +168,7 @@ namespace fwdSensors {
          */
         //% block="print number $value on quadrant $quadrant of $this"
         //% quadrant.min=1 quadrant.max=4 quadrant.defl=1
-        //% blockId=fwd_lcd_print_quadrant_number
+        //% blockId=openscied_lcd_print_quadrant_number
         //% group="LCD"
         //% weight=96
         printQuadrantNumber(value: number, quadrant: number) {
@@ -181,7 +183,7 @@ namespace fwdSensors {
         printAndWait(
             text: string,
             lineOrQuadrant: string,
-            rightAlign: boolean
+            rightAlign: boolean,
         ) {
             if (text === "undefined") {
                 text = "--"
@@ -213,11 +215,11 @@ namespace fwdSensors {
     }
 
     //% fixedInstance whenUsed
-    export const lcd1 = new LCDClient("lcd1")
+    export const lcd1 = new OpensciedLCDClient("lcd1")
     //% fixedInstance whenUsed
-    export const lcd2 = new LCDClient("lcd2")
+    export const lcd2 = new OpensciedLCDClient("lcd2")
     //% fixedInstance whenUsed
-    export const lcd3 = new LCDClient("lcd3")
+    export const lcd3 = new OpensciedLCDClient("lcd3")
     //% fixedInstance whenUsed
-    export const lcd4 = new LCDClient("lcd4")
+    export const lcd4 = new OpensciedLCDClient("lcd4")
 }

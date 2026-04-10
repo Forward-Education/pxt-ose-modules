@@ -1,6 +1,6 @@
-namespace fwdSensors {
+namespace opensciedModules {
     //% fixedInstances
-    export class FwdEco2Client extends modules.ECO2Client {
+    export class OpensciedEco2Client extends modules.ECO2Client {
         constructor(role: string) {
             super(role)
         }
@@ -10,7 +10,7 @@ namespace fwdSensors {
          */
         //% group="eCO2"
         //% block="$this ppm"
-        //% blockId=fwd_eco2_get_eco2
+        //% blockId=openscied_eco2_get_eco2
         //% weight=100
         eco2(): number {
             return super.eCO2()
@@ -23,31 +23,25 @@ namespace fwdSensors {
          */
         //% group="eCO2"
         //% block="$this is $direction $threshold ppm"
-        //% blockId=fwd_eco2_is_past_threshold
+        //% blockId=openscied_eco2_is_past_threshold
         //% weight=99
         isPastThreshold(
             threshold: number,
-            direction: fwdEnums.OverUnder
+            direction: opensciedEnums.OverUnder,
         ): boolean {
             const difference = this.eco2() - threshold > 0
             const isPastThreshold =
-                (direction === fwdEnums.OverUnder.Over && difference) ||
-                (direction === fwdEnums.OverUnder.Under && !difference)
+                (direction === opensciedEnums.OverUnder.Over && difference) ||
+                (direction === opensciedEnums.OverUnder.Under && !difference)
             return isPastThreshold
         }
     }
 
     //% fixedInstance whenUsed
-    export const eCO2_1 = new FwdEco2Client("eCO2_1")
-    //% fixedInstance whenUsed
-    export const eCO2_2 = new FwdEco2Client("eCO2_2")
-    //% fixedInstance whenUsed
-    export const eCO2_3 = new FwdEco2Client("eCO2_3")
-    //% fixedInstance whenUsed
-    export const eCO2_4 = new FwdEco2Client("eCO2_4")
+    export const eCO2 = new OpensciedEco2Client("eCO2")
 
     //% fixedInstances
-    export class FwdTvocClient extends modules.TvocClient {
+    export class OpensciedTvocClient extends modules.TvocClient {
         constructor(role: string) {
             super(role)
         }
@@ -57,7 +51,7 @@ namespace fwdSensors {
          */
         //% group="eCO2"
         //% block="$this reading"
-        //% blockId=fwd_tvoc_get_tvoc
+        //% blockId=openscied_tvoc_get_tvoc
         //% weight=98
         tvoc(): number {
             return super.tVOC()
@@ -70,26 +64,20 @@ namespace fwdSensors {
          */
         //% group="eCO2"
         //% block="$this is $direction $threshold"
-        //% blockId=fwd_tvoc_is_past_threshold
+        //% blockId=openscied_tvoc_is_past_threshold
         //% weight=97
         isPastThreshold(
             threshold: number,
-            direction: fwdEnums.OverUnder
+            direction: opensciedEnums.OverUnder,
         ): boolean {
             const difference = this.tvoc() - threshold > 0
             const isPastThreshold =
-                (direction === fwdEnums.OverUnder.Over && difference) ||
-                (direction === fwdEnums.OverUnder.Under && !difference)
+                (direction === opensciedEnums.OverUnder.Over && difference) ||
+                (direction === opensciedEnums.OverUnder.Under && !difference)
             return isPastThreshold
         }
     }
 
     //% fixedInstance whenUsed
-    export const tVOC1 = new FwdTvocClient("tVOC1")
-    //% fixedInstance whenUsed
-    export const tVOC2 = new FwdTvocClient("tVOC2")
-    //% fixedInstance whenUsed
-    export const tVOC3 = new FwdTvocClient("tVOC3")
-    //% fixedInstance whenUsed
-    export const tVOC4 = new FwdTvocClient("tVOC4")
+    export const tVOC = new OpensciedTvocClient("tVOC")
 }
