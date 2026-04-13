@@ -1,6 +1,8 @@
 namespace opensciedModules {
     //% fixedInstances
-    export class OpensciedTemperatureClient extends modules.TemperatureClient {
+    export class OpensciedBmeTemperatureClient
+        extends modules.TemperatureClient
+    {
         /**
          * Returns the sensor's temperature reading (°C).
          */
@@ -34,5 +36,5 @@ namespace opensciedModules {
     }
 
     //% fixedInstance whenUsed
-    export const temperature = new OpensciedTemperatureClient("temperature")
+    export const temperature = new OpensciedBmeTemperatureClient("temperature")
 }
