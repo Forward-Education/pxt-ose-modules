@@ -10,7 +10,7 @@ opensciedModules.dial1.onRotated(
 opensciedModules.dial1.onRotated(
     opensciedEnums.ClockwiseCounterclockwise.Counterclockwise,
     () =>
-        console.log("turned <- position " + +opensciedModules.dial1.position()),
+        console.log("turned <- position " + opensciedModules.dial1.position()),
 )
 
 // Dial Button tests
