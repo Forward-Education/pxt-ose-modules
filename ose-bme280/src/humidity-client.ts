@@ -1,6 +1,6 @@
 namespace opensciedModules {
     //% fixedInstances
-    export class OpensciedHumidityClient extends modules.HumidityClient {
+    export class OpensciedBmeHumidityClient extends modules.HumidityClient {
         /**
          * Returns the sensor's humidity reading (%).
          */
@@ -34,5 +34,5 @@ namespace opensciedModules {
     }
 
     //% fixedInstance whenUsed
-    export const humidity = new OpensciedHumidityClient("humidity")
+    export const bmeHumidity = new OpensciedBmeHumidityClient("bmeHumidity")
 }

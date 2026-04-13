@@ -36,5 +36,7 @@ namespace opensciedModules {
     }
 
     //% fixedInstance whenUsed
-    export const temperature = new OpensciedBmeTemperatureClient("temperature")
+    export const bmeTemperature = new OpensciedBmeTemperatureClient(
+        "bmeTemperature",
+    )
 }

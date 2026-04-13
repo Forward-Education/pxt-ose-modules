@@ -1,6 +1,8 @@
 namespace opensciedModules {
     //% fixedInstances
-    export class OpensciedAirPressureClient extends modules.AirPressureClient {
+    export class OpensciedBmeAirPressureClient
+        extends modules.AirPressureClient
+    {
         /**
          * Returns the sensor's air pressure reading (hPa).
          */
@@ -34,5 +36,7 @@ namespace opensciedModules {
     }
 
     //% fixedInstance whenUsed
-    export const airPressure = new OpensciedAirPressureClient("airPressure")
+    export const bmeAirPressure = new OpensciedBmeAirPressureClient(
+        "bmeAirPressure",
+    )
 }
