@@ -6,7 +6,8 @@
     "dependencies": {
         "ose-base": "github:Forward-Education/pxt-ose-base#a0c08324fc013397625d6e0f9fd99e0eb30db26f",
         "jacdac-e-co2": "github:jacdac/pxt-jacdac/e-co2#v1.9.41",
-        "jacdac-tvoc": "github:jacdac/pxt-jacdac/tvoc#v1.9.41"
+        "jacdac-tvoc": "github:jacdac/pxt-jacdac/tvoc#v1.9.41",
+        "jacdac-servo": "github:jacdac/pxt-jacdac/servo#v1.9.41"
     },
     "files": [
         "client.ts"
@@ -15,7 +16,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "8.0.16",
+        "target": "8.0.21",
         "targetId": "microbit"
     },
     "supportedTargets": [
