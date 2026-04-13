@@ -2,15 +2,16 @@
 // Type: functional
 //  position(): number
 //  isPastThreshold(threshold: number, direction: opensciedEnums.OverUnder): boolean
-console.log("position: " + opensciedModules.slider1.position())
 input.onButtonPressed(Button.A, function () {
+    basic.showNumber((opensciedModules.slider1.position()))
+    basic.pause(1000)
     if (
         opensciedModules.slider1.isPastThreshold(
             25,
             opensciedEnums.OverUnder.Over,
         )
     ) {
-        console.log(opensciedModules.slider1.position() + " is over 25%")
+        basic.showIcon(IconNames.Yes)
     }
     if (
         opensciedModules.slider1.isPastThreshold(
@@ -18,7 +19,8 @@ input.onButtonPressed(Button.A, function () {
             opensciedEnums.OverUnder.Under,
         )
     ) {
-        console.log(opensciedModules.slider1.position() + " is under 25%")
+        basic.showIcon(IconNames.No)
     }
     basic.pause(1000)
+    basic.clearScreen()
 })
