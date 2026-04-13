@@ -1,11 +1,11 @@
 {
-    "name": "ose-lcd",
+    "name": "ose-slider",
     "version": "0.0.0",
-    "description": "FWD Edu LCD",
+    "description": "OpenSciEd Slider",
     "license": "MIT",
     "dependencies": {
         "ose-base": "github:Forward-Education/pxt-ose-base#a0c08324fc013397625d6e0f9fd99e0eb30db26f",
-        "jacdac-cursor-character-screen": "github:jacdac/pxt-jacdac/cursor-character-screen#v1.9.41"
+        "jacdac-potentiometer": "github:jacdac/pxt-jacdac/potentiometer#v1.9.41"
     },
     "files": [
         "client.ts"
@@ -14,7 +14,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "8.0.16",
+        "target": "7.0.61",
         "targetId": "microbit"
     },
     "supportedTargets": [

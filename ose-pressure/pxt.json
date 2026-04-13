@@ -1,13 +1,13 @@
 {
     "name": "ose-pressure",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "description": "OpenSciEd pressure sensor",
     "license": "MIT",
     "dependencies": {
-        "ose-base": "github:Forward-Education/pxt-ose-base#a0c08324fc013397625d6e0f9fd99e0eb30db26f",
-        "jacdac-pressure": "github:jacdac/pxt-jacdac/pressure-button#v1.9.41"
+        "ose-base": "github:Forward-Education/pxt-ose-base#a0c08324fc013397625d6e0f9fd99e0eb30db26f"
     },
     "files": [
+        "constants.ts",
         "client.ts"
     ],
     "testFiles": [

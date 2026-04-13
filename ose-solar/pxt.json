@@ -1,7 +1,7 @@
 {
     "name": "ose-solar",
-    "version": "1.0.0",
-    "description": "FWD Edu Climate Action Kit Gen. 2 Solar",
+    "version": "0.0.0",
+    "description": "OpenSciEd Solar",
     "license": "MIT",
     "dependencies": {
         "ose-base": "github:Forward-Education/pxt-ose-base#a0c08324fc013397625d6e0f9fd99e0eb30db26f",
