@@ -5,7 +5,8 @@
     "license": "MIT",
     "dependencies": {
         "ose-base": "github:Forward-Education/pxt-ose-base#a0c08324fc013397625d6e0f9fd99e0eb30db26f",
-        "jacdac-flex": "github:jacdac/pxt-jacdac/flex#v1.9.41"
+        "jacdac-flex": "github:jacdac/pxt-jacdac/flex#v1.9.41",
+        "jacdac-servo": "github:jacdac/pxt-jacdac/servo#v1.9.41"
     },
     "files": [
         "client.ts"
