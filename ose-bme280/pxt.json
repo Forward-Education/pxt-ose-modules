@@ -7,7 +7,8 @@
         "ose-base": "github:Forward-Education/pxt-ose-base#a0c08324fc013397625d6e0f9fd99e0eb30db26f",
         "jacdac-temperature": "github:jacdac/pxt-jacdac/temperature#v1.9.41",
         "jacdac-humidity": "github:jacdac/pxt-jacdac/humidity#v1.9.41",
-        "jacdac-air-pressure": "github:jacdac/pxt-jacdac/air-pressure#v1.9.41"
+        "jacdac-air-pressure": "github:jacdac/pxt-jacdac/air-pressure#v1.9.41",
+        "jacdac-servo": "github:jacdac/pxt-jacdac/servo#v1.9.41"
     },
     "files": [
         "src/temperature-client.ts",
