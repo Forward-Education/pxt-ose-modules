@@ -1,6 +1,6 @@
 {
     "name": "ose-servo-positional",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "OpenSciEd Servo Positional",
     "license": "MIT",
     "dependencies": {

@@ -1,6 +1,6 @@
 {
     "name": "ose-servo-continuous",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "OpenSciEd Servo Continuous",
     "license": "MIT",
     "dependencies": {
