@@ -4,15 +4,16 @@
 //  isPastThreshold(threshold: number, direction: opensciedEnums.OverUnder): boolean
 //  tare(): void
 //  calibrate(calibrationWeight: number): void
-console.log("weight: " + opensciedModules.weight1.weight())
 input.onButtonPressed(Button.A, function () {
+    basic.showNumber((opensciedModules.weight1.weight()))
+    basic.pause(1000)
     if (
         opensciedModules.weight1.isPastThreshold(
             25,
             opensciedEnums.OverUnder.Over,
         )
     ) {
-        console.log(opensciedModules.weight1.weight() + " is over 25g")
+        basic.showIcon(IconNames.Yes)
     }
     if (
         opensciedModules.weight1.isPastThreshold(
@@ -20,7 +21,14 @@ input.onButtonPressed(Button.A, function () {
             opensciedEnums.OverUnder.Under,
         )
     ) {
-        console.log(opensciedModules.weight1.weight() + " is under 25g")
+        basic.showIcon(IconNames.No)
     }
     basic.pause(1000)
+    basic.clearScreen()
+})
+input.onButtonPressed(Button.AB, function () {
+    opensciedModules.weight1.calibrate(10)
+})
+input.onButtonPressed(Button.B, function () {
+    opensciedModules.weight1.tare()
 })

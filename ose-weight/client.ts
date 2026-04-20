@@ -52,7 +52,7 @@ namespace opensciedModules {
          * @param calibrationWeight the item of known weight (g)
          */
         //% group="Weight"
-        //% block="$this calibrate"
+        //% block="$this calibrate $calibrationWeight g"
         //% blockId=openscied_weight_calibrate
         //% weight=97
         calibrate(calibrationWeight: number): void {
