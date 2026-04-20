@@ -5,31 +5,65 @@
 //  temperature(): number
 //  isPastThreshold(threshold: number, direction: opensciedEnums.OverUnder): boolean
 basic.forever(function () {
-    basic.showString('P:' + Math.round(opensciedModules.airPressure.pressure()))
-    if(opensciedModules.airPressure.isPastThreshold(1000, opensciedEnums.OverUnder.Over)) {
+    basic.showString(
+        "P:" + Math.round(opensciedModules.bmeAirPressure.pressure()),
+    )
+    if (
+        opensciedModules.bmeAirPressure.isPastThreshold(
+            1000,
+            opensciedEnums.OverUnder.Over,
+        )
+    ) {
         basic.showIcon(IconNames.Yes)
     }
-    if (opensciedModules.airPressure.isPastThreshold(1000, opensciedEnums.OverUnder.Under)) {
+    if (
+        opensciedModules.bmeAirPressure.isPastThreshold(
+            1000,
+            opensciedEnums.OverUnder.Under,
+        )
+    ) {
         basic.showIcon(IconNames.No)
     }
     basic.pause(1000)
     basic.clearScreen()
     basic.pause(500)
-    basic.showString('H:' + Math.round(opensciedModules.humidity.humidity()))
-    if (opensciedModules.humidity.isPastThreshold(45, opensciedEnums.OverUnder.Over)) {
+    basic.showString("H:" + Math.round(opensciedModules.bmeHumidity.humidity()))
+    if (
+        opensciedModules.bmeHumidity.isPastThreshold(
+            45,
+            opensciedEnums.OverUnder.Over,
+        )
+    ) {
         basic.showIcon(IconNames.Yes)
     }
-    if (opensciedModules.humidity.isPastThreshold(45, opensciedEnums.OverUnder.Under)) {
+    if (
+        opensciedModules.bmeHumidity.isPastThreshold(
+            45,
+            opensciedEnums.OverUnder.Under,
+        )
+    ) {
         basic.showIcon(IconNames.No)
     }
     basic.pause(1000)
     basic.clearScreen()
     basic.pause(500)
-    basic.showString('T:' + Math.round(opensciedModules.temperature.temperature()))
-    if (opensciedModules.temperature.isPastThreshold(22, opensciedEnums.OverUnder.Over)) {
+    basic.showString(
+        "T:" + Math.round(opensciedModules.bmeTemperature.temperature()),
+    )
+    if (
+        opensciedModules.bmeTemperature.isPastThreshold(
+            22,
+            opensciedEnums.OverUnder.Over,
+        )
+    ) {
         basic.showIcon(IconNames.Yes)
     }
-    if (opensciedModules.temperature.isPastThreshold(22, opensciedEnums.OverUnder.Under)) {
+    if (
+        opensciedModules.bmeTemperature.isPastThreshold(
+            22,
+            opensciedEnums.OverUnder.Under,
+        )
+    ) {
         basic.showIcon(IconNames.No)
     }
     basic.pause(1000)
@@ -40,17 +74,17 @@ basic.forever(function () {
 // BME280 Tests
 // Type: compilation
 //  pressure(): number
-//  humidity(): number
-//  temperature(): number
+//  bmeHumidity(): number
+//  bmeTemperature(): number
 //  isPastThreshold(threshold: number, direction: opensciedEnums.OverUnder): boolean
 // basic.forever(function () {
-//     if (opensciedModules.airPressure.isPastThreshold(0, opensciedEnums.OverUnder.Over)) {
-//         basic.showNumber(opensciedModules.airPressure.pressure())
+//     if (opensciedModules.bmeAirPressure.isPastThreshold(0, opensciedEnums.OverUnder.Over)) {
+//         basic.showNumber(opensciedModules.bmeAirPressure.pressure())
 //     }
-//     if (opensciedModules.humidity.isPastThreshold(0, opensciedEnums.OverUnder.Over)) {
-//         basic.showNumber(opensciedModules.humidity.humidity())
+//     if (opensciedModules.bmeHumidity.isPastThreshold(0, opensciedEnums.OverUnder.Over)) {
+//         basic.showNumber(opensciedModules.bmeHumidity.bmeHumidity())
 //     }
-//     if (opensciedModules.temperature.isPastThreshold(0, opensciedEnums.OverUnder.Over)) {
-//         basic.showNumber(opensciedModules.temperature.temperature())
+//     if (opensciedModules.bmeTemperature.isPastThreshold(0, opensciedEnums.OverUnder.Over)) {
+//         basic.showNumber(opensciedModules.bmeTemperature.bmeTemperature())
 //     }
 // })
