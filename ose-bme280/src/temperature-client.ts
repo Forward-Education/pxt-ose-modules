@@ -8,7 +8,7 @@ namespace opensciedModules {
          */
         //% group="BME280"
         //% block="$this °C"
-        //% blockId=openscied_temperature_get_temperature
+        //% blockId=openscied_bmetemperature_get_temperature
         //% weight=100
         temperature(): number {
             return super.temperature()
@@ -21,7 +21,7 @@ namespace opensciedModules {
          */
         //% group="BME280"
         //% block="$this is $direction $threshold °C"
-        //% blockId=openscied_temperature_is_past_threshold
+        //% blockId=openscied_bmetemperature_is_past_threshold
         //% weight=99
         isPastThreshold(
             threshold: number,
