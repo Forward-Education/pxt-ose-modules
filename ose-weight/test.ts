@@ -2,6 +2,8 @@
 // Type: functional
 //  weight(): number
 //  isPastThreshold(threshold: number, direction: opensciedEnums.OverUnder): boolean
+//  tare(): void
+//  calibrate(calibrationWeight: number): void
 console.log("weight: " + opensciedModules.weight1.weight())
 input.onButtonPressed(Button.A, function () {
     if (

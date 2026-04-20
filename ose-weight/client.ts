@@ -35,6 +35,29 @@ namespace opensciedModules {
                 (direction === opensciedEnums.OverUnder.Under && !difference)
             return isPastThreshold
         }
+
+        /**
+         * Calibrates the weight sensor to zero (tare).
+         */
+        //% group="Weight"
+        //% block="$this tare"
+        //% blockId=openscied_weight_tare
+        //% weight=98
+        tare(): void {
+            super.calibrateZeroOffset()
+        }
+
+        /**
+         * Calibrates the weight sensor using an item of known weight.
+         * @param calibrationWeight the item of known weight (g)
+         */
+        //% group="Weight"
+        //% block="$this calibrate"
+        //% blockId=openscied_weight_calibrate
+        //% weight=97
+        calibrate(calibrationWeight: number): void {
+            super.calibrateGain(calibrationWeight)
+        }
     }
 
     //% fixedInstance whenUsed
