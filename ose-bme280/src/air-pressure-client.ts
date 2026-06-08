@@ -8,7 +8,7 @@ namespace opensciedModules {
          */
         //% group="BME280"
         //% block="$this hPa"
-        //% blockId=openscied_airPressure_get_airPressure
+        //% blockId=openscied_bmeairpressure_pressure
         //% weight=100
         pressure(): number {
             return super.pressure()
@@ -21,7 +21,7 @@ namespace opensciedModules {
          */
         //% group="BME280"
         //% block="$this is $direction $threshold hPa"
-        //% blockId=openscied_airPressure_is_past_threshold
+        //% blockId=openscied_bmeairpressure_is_past_threshold
         //% weight=99
         isPastThreshold(
             threshold: number,

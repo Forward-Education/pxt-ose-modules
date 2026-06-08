@@ -8,7 +8,7 @@ namespace opensciedModules {
          */
         //% group="BME280"
         //% block="$this °C"
-        //% blockId=openscied_bmetemperature_get_temperature
+        //% blockId=openscied_bmetemperature_temperature
         //% weight=100
         temperature(): number {
             return super.temperature()

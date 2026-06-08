@@ -22,11 +22,9 @@ namespace opensciedModules {
      */
     //% group="Servo - Continuous"
     //% block="$servo speed (\\%)"
-    //% blockId=openscied_servocon_get_speed
+    //% blockId=openscied_servocon_speed
     //% weight=98
-    export function getSpeed(
-        servo: opensciedBase.OpensciedServoClient,
-    ): number {
+    export function speed(servo: opensciedBase.OpensciedServoClient): number {
         return servo.getSpeed()
     }
 }

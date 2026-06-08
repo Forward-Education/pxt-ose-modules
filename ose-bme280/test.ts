@@ -82,9 +82,9 @@ basic.forever(function () {
 //         basic.showNumber(opensciedModules.bmeAirPressure.pressure())
 //     }
 //     if (opensciedModules.bmeHumidity.isPastThreshold(0, opensciedEnums.OverUnder.Over)) {
-//         basic.showNumber(opensciedModules.bmeHumidity.bmeHumidity())
+//         basic.showNumber(opensciedModules.bmeHumidity.humidity())
 //     }
 //     if (opensciedModules.bmeTemperature.isPastThreshold(0, opensciedEnums.OverUnder.Over)) {
-//         basic.showNumber(opensciedModules.bmeTemperature.bmeTemperature())
+//         basic.showNumber(opensciedModules.bmeTemperature.temperature())
 //     }
 // })

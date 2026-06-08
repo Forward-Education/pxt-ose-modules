@@ -6,7 +6,7 @@ namespace opensciedModules {
          */
         //% group="BME280"
         //% block="$this \\%"
-        //% blockId=openscied_humidity_get_humidity
+        //% blockId=openscied_bmehumidity_humidity
         //% weight=100
         humidity(): number {
             return super.humidity()
@@ -19,7 +19,7 @@ namespace opensciedModules {
          */
         //% group="BME280"
         //% block="$this is $direction $threshold \\%"
-        //% blockId=openscied_humidity_is_past_threshold
+        //% blockId=openscied_bmehumidity_is_past_threshold
         //% weight=99
         isPastThreshold(
             threshold: number,

@@ -39,11 +39,9 @@ namespace opensciedModules {
      */
     //% group="Servo - 270° Positional"
     //% block="$servo angle (°)"
-    //% blockId=openscied_servopos_get_angle
+    //% blockId=openscied_servopos_angle
     //% weight=97
-    export function getAngle(
-        servo: opensciedBase.OpensciedServoClient,
-    ): number {
+    export function angle(servo: opensciedBase.OpensciedServoClient): number {
         return servo.getAngle()
     }
 }
