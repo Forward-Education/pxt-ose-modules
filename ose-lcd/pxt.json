@@ -1,6 +1,6 @@
 {
     "name": "ose-lcd",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "FWD Edu LCD",
     "license": "MIT",
     "dependencies": {

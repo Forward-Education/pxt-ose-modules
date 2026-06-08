@@ -1,6 +1,6 @@
 {
     "name": "ose-flex",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "OpenSciEd flex sensor",
     "license": "MIT",
     "dependencies": {
