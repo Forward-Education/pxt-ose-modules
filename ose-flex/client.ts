@@ -5,7 +5,7 @@ namespace opensciedModules {
          * Returns the sensor's flex reading (%).
          */
         //% group="Flex"
-        //% block="$this %"
+        //% block="$this \\%"
         //% blockId=openscied_flex_get_flex
         //% weight=100
         flex(): number {
@@ -18,7 +18,7 @@ namespace opensciedModules {
          * @param direction over or under the threshold
          */
         //% group="Flex"
-        //% block="$this is $direction $threshold %"
+        //% block="$this is $direction $threshold \\%"
         //% blockId=openscied_flex_is_past_threshold
         //% weight=99
         isPastThreshold(
