@@ -4,7 +4,7 @@
     "description": "OpenSciEd Pump",
     "license": "MIT",
     "dependencies": {
-        "ose-base": "github:Forward-Education/pxt-ose-base#a0c08324fc013397625d6e0f9fd99e0eb30db26f",
+        "ose-base": "github:Forward-Education/pxt-ose-base#v1.1.1",
         "jacdac-relay": "github:jacdac/pxt-jacdac/relay#v1.9.41"
     },
     "files": [
