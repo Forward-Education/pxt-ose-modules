@@ -1,6 +1,6 @@
 {
     "name": "ose-slider",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "OpenSciEd Slider",
     "license": "MIT",
     "dependencies": {
