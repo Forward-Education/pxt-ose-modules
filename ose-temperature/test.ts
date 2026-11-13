@@ -26,3 +26,21 @@ input.onButtonPressed(Button.A, function () {
     }
     basic.pause(1000)
 })
+// Unit dropdown: °F reading and threshold
+console.log(
+    "temperature °F: " +
+        opensciedModules.temperature1.readTemperature(
+            opensciedEnums.TemperatureUnit.Fahrenheit,
+        ),
+)
+input.onButtonPressed(Button.B, function () {
+    if (
+        opensciedModules.temperature1.isPastThreshold(
+            77,
+            opensciedEnums.OverUnder.Over,
+            opensciedEnums.TemperatureUnit.Fahrenheit,
+        )
+    ) {
+        console.log("over 77°F")
+    }
+})

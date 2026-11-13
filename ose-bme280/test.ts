@@ -88,3 +88,16 @@ basic.forever(function () {
 //         basic.showNumber(opensciedModules.bmeTemperature.temperature())
 //     }
 // })
+
+// Unit dropdown: °F reading and threshold
+console.log(
+    "T °F: " +
+        opensciedModules.bmeTemperature.readTemperature(
+            opensciedEnums.TemperatureUnit.Fahrenheit,
+        ),
+)
+opensciedModules.bmeTemperature.isPastThreshold(
+    77,
+    opensciedEnums.OverUnder.Over,
+    opensciedEnums.TemperatureUnit.Fahrenheit,
+)

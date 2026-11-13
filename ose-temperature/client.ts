@@ -6,30 +6,40 @@ namespace opensciedModules {
         }
 
         /**
-         * Returns the sensor's temperature reading (°C).
+         * Returns the sensor's temperature reading in the chosen unit.
+         * @param unit °C or °F, defaults to °C
          */
         //% group="Temperature Probe"
-        //% block="$this °C"
+        //% block="$this $unit"
         //% blockId=openscied_temperature_get_temperature
         //% weight=100
-        temperature(): number {
-            return super.temperature()
+        readTemperature(
+            unit: opensciedEnums.TemperatureUnit = opensciedEnums.TemperatureUnit
+                .Celsius,
+        ): number {
+            const celsius = super.temperature()
+            return unit === opensciedEnums.TemperatureUnit.Fahrenheit
+                ? celsius * 1.8 + 32
+                : celsius
         }
 
         /**
-         * Returns true when the temperature (°C) is past the provided threshold in the designated direction.
-         * @param threshold the temperature (°C) to check against
+         * Returns true when the temperature is past the provided threshold in the designated direction.
+         * @param threshold the temperature to check against, in the chosen unit
          * @param direction over or under the threshold
+         * @param unit °C or °F, defaults to °C
          */
         //% group="Temperature Probe"
-        //% block="$this is $direction $threshold °C"
+        //% block="$this is $direction $threshold $unit"
         //% blockId=openscied_temperature_is_past_threshold
         //% weight=99
         isPastThreshold(
             threshold: number,
             direction: opensciedEnums.OverUnder,
+            unit: opensciedEnums.TemperatureUnit = opensciedEnums.TemperatureUnit
+                .Celsius,
         ): boolean {
-            const difference = this.temperature() - threshold > 0
+            const difference = this.readTemperature(unit) - threshold > 0
             const isPastThreshold =
                 (direction === opensciedEnums.OverUnder.Over && difference) ||
                 (direction === opensciedEnums.OverUnder.Under && !difference)
