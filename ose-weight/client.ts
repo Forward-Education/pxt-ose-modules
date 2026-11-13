@@ -13,7 +13,8 @@ namespace opensciedModules {
         //% blockId=openscied_weight_get_weight
         //% weight=100
         weight(): number {
-            return super.weight()
+            // Jacdac weight scale reports kilograms; this block is labelled grams.
+            return super.weight() * 1000
         }
 
         /**
