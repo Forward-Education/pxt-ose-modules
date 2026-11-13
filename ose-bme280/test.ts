@@ -101,3 +101,6 @@ opensciedModules.bmeTemperature.isPastThreshold(
     opensciedEnums.OverUnder.Over,
     opensciedEnums.TemperatureUnit.Fahrenheit,
 )
+
+// Absolute humidity (g/m3)
+console.log("AH: " + opensciedModules.bmeHumidity.absoluteHumidity())

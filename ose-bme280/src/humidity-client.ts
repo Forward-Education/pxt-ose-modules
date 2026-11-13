@@ -13,6 +13,23 @@ namespace opensciedModules {
         }
 
         /**
+         * Returns the absolute humidity (g/m³), calculated from this sensor's
+         * relative humidity and the BME280 temperature (Magnus formula).
+         */
+        //% group="BME280"
+        //% block="$this absolute humidity (g/m³)"
+        //% blockId=openscied_bmehumidity_absolute_humidity
+        //% weight=98
+        absoluteHumidity(): number {
+            const t = bmeTemperature.temperature()
+            const rh = this.humidity()
+            return (
+                (6.112 * Math.exp((17.67 * t) / (t + 243.5)) * rh * 2.1674) /
+                (273.15 + t)
+            )
+        }
+
+        /**
          * Returns true when the humidity (%) is past the provided threshold in the designated direction.
          * @param threshold the humidity (%) to check against
          * @param direction over or under the threshold
