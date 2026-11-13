@@ -5,3 +5,6 @@
 if (opensciedModules.solar1.isPastThreshold(5, opensciedEnums.OverUnder.Over)) {
     basic.showNumber(opensciedModules.solar1.lightLevel())
 }
+
+// Sample interval (light gate timing)
+opensciedModules.solar1.setSampleInterval(20)

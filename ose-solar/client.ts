@@ -53,6 +53,20 @@ namespace opensciedModules {
                 (direction === opensciedEnums.OverUnder.Under && !difference)
             return isPastThreshold
         }
+
+        /**
+         * Sets how often the sensor sends a new reading. The default is 100 ms.
+         * Use a short interval, such as 20 ms, for fast events like a light gate.
+         * @param interval time between readings (ms), at least 20
+         */
+        //% group="Solar"
+        //% block="set $this sample interval to $interval ms"
+        //% blockId=openscied_solar_set_sample_interval
+        //% interval.min=20 interval.max=1000 interval.defl=20
+        //% weight=98
+        setSampleInterval(interval: number): void {
+            super.setStreaming(true, Math.max(20, Math.round(interval)))
+        }
     }
 
     //% fixedInstance whenUsed
