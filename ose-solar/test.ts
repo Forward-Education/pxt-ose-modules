@@ -7,4 +7,4 @@ if (opensciedModules.solar1.isPastThreshold(5, opensciedEnums.OverUnder.Over)) {
 }
 
 // Sample interval (light gate timing)
-opensciedModules.solar1.setSampleInterval(20)
+opensciedModules.solar1.setSamplingRate(opensciedEnums.SamplingRate.Fast)

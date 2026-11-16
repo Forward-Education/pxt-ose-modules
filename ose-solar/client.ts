@@ -1,3 +1,12 @@
+namespace opensciedEnums {
+    export const enum SamplingRate {
+        //% block="fast"
+        Fast = 20,
+        //% block="normal"
+        Normal = 100,
+    }
+}
+
 namespace opensciedModules {
     //% fixedInstances
     export class OpensciedSolarClient extends modules.LightLevelClient {
@@ -55,17 +64,16 @@ namespace opensciedModules {
         }
 
         /**
-         * Sets how often the sensor sends a new reading. The default is 100 ms.
-         * Use a short interval, such as 20 ms, for fast events like a light gate.
-         * @param interval time between readings (ms), at least 20
+         * Sets how often the sensor sends a new reading.
+         * Fast sends a reading every 20 ms, for quick events like a light gate. Normal sends one every 100 ms.
+         * @param rate fast (20 ms) or normal (100 ms)
          */
         //% group="Solar"
-        //% block="set $this sample interval to $interval ms"
-        //% blockId=openscied_solar_set_sample_interval
-        //% interval.min=20 interval.max=1000 interval.defl=20
+        //% block="set $this sampling to $rate"
+        //% blockId=openscied_solar_set_sampling_rate
         //% weight=98
-        setSampleInterval(interval: number): void {
-            super.setStreaming(true, Math.max(20, Math.round(interval)))
+        setSamplingRate(rate: opensciedEnums.SamplingRate): void {
+            super.setStreaming(true, rate)
         }
     }
 
