@@ -19,7 +19,8 @@ namespace opensciedModules {
         }
 
         /**
-         * Turn on the pump for the selected duration (ms).
+         * Turn on the pump for the selected duration (ms), then turn it off.
+         * The program waits here until the pump has stopped.
          * @param duration how long to run the pump (ms)
          */
         //% group="Pump"
@@ -28,11 +29,9 @@ namespace opensciedModules {
         //% blockId=openscied_pump_timed_run
         //% weight=99
         timedRun(duration: number): void {
-            control.inBackground(() => {
-                this.setActive(true)
-                basic.pause(duration)
-                this.setActive(false)
-            })
+            this.setActive(true)
+            basic.pause(duration)
+            this.setActive(false)
         }
 
         /**
