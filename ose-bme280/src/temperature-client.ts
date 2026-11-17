@@ -22,7 +22,7 @@ namespace opensciedModules {
         }
 
         /**
-         * Returns true when the temperature is past the provided threshold in the designated direction.
+         * Returns true when the temperature is over or under the provided threshold. Over is ≥ (at or above) and under is ≤ (at or below).
          * @param threshold the temperature to check against, in the chosen unit
          * @param direction over or under the threshold
          * @param unit °C or °F, defaults to °C

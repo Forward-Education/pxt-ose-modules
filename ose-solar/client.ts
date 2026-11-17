@@ -43,7 +43,7 @@ namespace opensciedModules {
         }
 
         /**
-         * Returns true when the light level (%) is past the provided threshold in the designated direction.
+         * Returns true when the light level (%) is over or under the provided threshold. Over is ≥ (at or above) and under is ≤ (at or below).
          * @param threshold the light level (%) to check against
          * @param direction over or under the threshold
          */

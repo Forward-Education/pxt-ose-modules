@@ -21,7 +21,7 @@ namespace opensciedModules {
         }
 
         /**
-         * Returns true when the pressure reading is past the provided threshold in the designated direction.
+         * Returns true when the pressure reading is over or under the provided threshold. Over is ≥ (at or above) and under is ≤ (at or below).
          * @param threshold the pressure value to check against
          * @param direction over or under the threshold
          */
