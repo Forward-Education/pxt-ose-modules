@@ -64,20 +64,20 @@ namespace opensciedModules {
         //% group="Dial"
         //% block="reset $this position"
         //% blockId=openscied_dial_reset_position
-        //% weight=98
+        //% weight=97
         resetPosition(): void {
             this._zeroOffset = super.position()
         }
 
         /**
-         * The angle of the dial (degrees) relative to its zero position.
-         * One click is 18 degrees (20 clicks per turn). Like position, it keeps
+         * The angle of the dial (°) relative to its zero position.
+         * One click is 18° (20 clicks per turn). Like position, it keeps
          * counting past 360 instead of wrapping back to 0.
          */
         //% group="Dial"
-        //% block="$this angle (degrees)"
+        //% block="$this angle (°)"
         //% blockId=openscied_dial_angle
-        //% weight=97
+        //% weight=98
         angle(): number {
             // The kit dial has 20 clicks per full turn, so each click is 18 degrees.
             return this.position() * 18
