@@ -3,12 +3,14 @@ namespace opensciedModules {
     export class OpensciedDialClient extends modules.RotaryEncoderClient {
         private _cwAction: () => void
         private _ccwAction: () => void
+        private _zeroOffset: number
 
         constructor(role: string) {
             super(role)
 
             this._cwAction = () => {}
             this._ccwAction = () => {}
+            this._zeroOffset = 0
 
             // this sets up the functions to run when the dial is turned clockwise or counterclockwise
             // initially the functions are blank, they get assigned by the makecode program through onRotated()
@@ -44,7 +46,7 @@ namespace opensciedModules {
         }
 
         /**
-         * The position of the dial relative to it's starting position when it was connected.
+         * The position of the dial relative to its zero position (where it was when connected, or the last reset).
          * 0 is the starting position. A clockwise click is +1. A counterclockwise click is -1.
          * It does not reset to 0 after 1 full rotation. Instead it continues to increment.
          */
@@ -53,7 +55,32 @@ namespace opensciedModules {
         //% blockId=openscied_dial_position
         //% weight=99
         position(): number {
-            return super.position()
+            return super.position() - this._zeroOffset
+        }
+
+        /**
+         * Set the dial's current position to 0. Position and angle are measured from here.
+         */
+        //% group="Dial"
+        //% block="reset $this position"
+        //% blockId=openscied_dial_reset_position
+        //% weight=98
+        resetPosition(): void {
+            this._zeroOffset = super.position()
+        }
+
+        /**
+         * The angle of the dial (degrees) relative to its zero position.
+         * One click is 18 degrees (20 clicks per turn). Like position, it keeps
+         * counting past 360 instead of wrapping back to 0.
+         */
+        //% group="Dial"
+        //% block="$this angle (degrees)"
+        //% blockId=openscied_dial_angle
+        //% weight=97
+        angle(): number {
+            // The kit dial has 20 clicks per full turn, so each click is 18 degrees.
+            return this.position() * 18
         }
     }
 
@@ -80,7 +107,7 @@ namespace opensciedModules {
         //% group="Dial"
         //% block="on $this $event"
         //% blockId=openscied_dialbutton_on_event
-        //% weight=98
+        //% weight=96
         onEvent(event: jacdac.ButtonEvent, handler: () => void) {
             super.onEvent(event, handler)
         }
@@ -91,7 +118,7 @@ namespace opensciedModules {
         //% group="Dial"
         //% block="$this hold duration (ms)"
         //% blockId=openscied_dialbutton_hold_duration
-        //% weight=97
+        //% weight=95
         holdDuration(): number {
             return super.holdDuration()
         }
@@ -102,7 +129,7 @@ namespace opensciedModules {
         //% group="Dial"
         //% block="$this is pressed"
         //% blockId=openscied_dialbutton_is_pressed
-        //% weight=96
+        //% weight=94
         isPressed(): boolean {
             return super.pressed()
         }
