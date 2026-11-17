@@ -37,11 +37,7 @@ namespace opensciedModules {
             unit: opensciedEnums.TemperatureUnit = opensciedEnums.TemperatureUnit
                 .Celsius,
         ): boolean {
-            const difference = this.readTemperature(unit) - threshold > 0
-            const isPastThreshold =
-                (direction === opensciedEnums.OverUnder.Over && difference) ||
-                (direction === opensciedEnums.OverUnder.Under && !difference)
-            return isPastThreshold
+            return opensciedModules.compareToThreshold(this.readTemperature(unit), threshold, direction)
         }
     }
 

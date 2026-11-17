@@ -33,11 +33,7 @@ namespace opensciedModules {
             threshold: number,
             direction: opensciedEnums.OverUnder,
         ): boolean {
-            const difference = this.pressure() - threshold > 0
-            const isPastThreshold =
-                (direction === opensciedEnums.OverUnder.Over && difference) ||
-                (direction === opensciedEnums.OverUnder.Under && !difference)
-            return isPastThreshold
+            return opensciedModules.compareToThreshold(this.pressure(), threshold, direction)
         }
     }
 

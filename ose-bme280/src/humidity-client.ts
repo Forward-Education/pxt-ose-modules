@@ -42,11 +42,7 @@ namespace opensciedModules {
             threshold: number,
             direction: opensciedEnums.OverUnder,
         ): boolean {
-            const difference = this.humidity() - threshold > 0
-            const isPastThreshold =
-                (direction === opensciedEnums.OverUnder.Over && difference) ||
-                (direction === opensciedEnums.OverUnder.Under && !difference)
-            return isPastThreshold
+            return opensciedModules.compareToThreshold(this.humidity(), threshold, direction)
         }
     }
 

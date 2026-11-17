@@ -4,7 +4,7 @@
     "description": "OpenSciEd Slider",
     "license": "MIT",
     "dependencies": {
-        "ose-base": "github:Forward-Education/pxt-ose-base#v1.1.1",
+        "ose-base": "github:Forward-Education/pxt-ose-base#d3da33916055cdb6c14754f19ce88129dc83a048",
         "jacdac-potentiometer": "github:jacdac/pxt-jacdac/potentiometer#v1.9.41"
     },
     "files": [

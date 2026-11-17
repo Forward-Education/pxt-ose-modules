@@ -29,11 +29,7 @@ namespace opensciedModules {
             threshold: number,
             direction: opensciedEnums.OverUnder,
         ): boolean {
-            const difference = this.eco2() - threshold > 0
-            const isPastThreshold =
-                (direction === opensciedEnums.OverUnder.Over && difference) ||
-                (direction === opensciedEnums.OverUnder.Under && !difference)
-            return isPastThreshold
+            return opensciedModules.compareToThreshold(this.eco2(), threshold, direction)
         }
     }
 
@@ -70,11 +66,7 @@ namespace opensciedModules {
             threshold: number,
             direction: opensciedEnums.OverUnder,
         ): boolean {
-            const difference = this.tvoc() - threshold > 0
-            const isPastThreshold =
-                (direction === opensciedEnums.OverUnder.Over && difference) ||
-                (direction === opensciedEnums.OverUnder.Under && !difference)
-            return isPastThreshold
+            return opensciedModules.compareToThreshold(this.tvoc(), threshold, direction)
         }
     }
 
