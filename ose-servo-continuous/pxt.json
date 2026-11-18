@@ -4,8 +4,8 @@
     "description": "OpenSciEd Servo Continuous",
     "license": "MIT",
     "dependencies": {
-        "ose-base": "github:Forward-Education/pxt-ose-base#v1.1.1",
-        "ose-servo-base": "github:Forward-Education/pxt-ose-base/ose-servo-base#v1.1.1"
+        "ose-base": "github:Forward-Education/pxt-ose-base#v1.2.0",
+        "ose-servo-base": "github:Forward-Education/pxt-ose-base/ose-servo-base#v1.2.0"
     },
     "files": [
         "blocks.ts",

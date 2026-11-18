@@ -4,7 +4,7 @@
     "description": "OpenSciEd Temperature",
     "license": "MIT",
     "dependencies": {
-        "ose-base": "github:Forward-Education/pxt-ose-base#638e4c0e25ae25bcd952d786d78204ff9d743c7b",
+        "ose-base": "github:Forward-Education/pxt-ose-base#v1.2.0",
         "jacdac-temperature": "github:jacdac/pxt-jacdac/temperature#v1.9.41"
     },
     "files": [
